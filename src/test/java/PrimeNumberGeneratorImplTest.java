@@ -34,6 +34,39 @@ public class PrimeNumberGeneratorImplTest {
     }
 
     @Test
+    public void isPrimeThreeTest() {
+        assertTrue(primeNumberGenerator.isPrime(3));
+    }
+
+
+    @Test
+    public void isPrimeFourTest() {
+        assertFalse(primeNumberGenerator.isPrime(4));
+    }
+
+    @Test
+    public void isPrimeFiveTest() {
+        assertTrue(primeNumberGenerator.isPrime(5));
+    }
+
+    @Test
+    public void isPrimeNineTest() {
+        assertFalse(primeNumberGenerator.isPrime(9));
+    }
+
+    @Test
+    public void isPrime100Test() {
+        assertFalse(primeNumberGenerator.isPrime(100));
+    }
+
+    @Test
+    public void isPrime101Test() {
+        assertTrue(primeNumberGenerator.isPrime(101));
+    }
+
+
+
+    @Test
     public void generateTestNone() {
         List<Integer> primeList = primeNumberGenerator.generate(-999,1);
         assertEquals(0, primeList.size());
